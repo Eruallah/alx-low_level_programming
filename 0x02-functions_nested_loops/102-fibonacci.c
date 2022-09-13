@@ -1,33 +1,43 @@
 #include <stdio.h>
 
 /**
- * main - sums nultplies of 3 or 5
- *
- * Description: multiples between 0 and 1024
- * Return: Always(0) Success
+ * main - block to be executed
+ * Description: computes
+ * Return: 0
  */
-
 int main(void)
 {
-	int start_num, end_num, total;
+	unsigned long int i;
+	unsigned long int bef = 1;
+	unsigned long int aft = 2;
+	unsigned long int l = 1000000000;
+	unsigned long int bef1;
+	unsigned long int bef2;
+	unsigned long int aft1;
+	unsigned long int aft2;
 
-	end_num = 1024;
-	total = 0;
+	printf("%lu", bef);
 
-	for (start_num = 0; start_num < end_num; start_num++)
+	for (i = 1; i < 91; i++)
 	{
-		if ((start_num % 3 == 0) || (start_num % 5 == 0))
-		{
-			total = total + start_num;
-		}
-		else
-		{
-			continue;
-		}
+		printf(", %lu", aft);
+		aft += bef;
+		bef = aft - bef;
 	}
+	bef1 = (bef / l);
+	bef2 = (bef % l);
+	aft1 = (aft / l);
+	aft2 = (aft % l);
 
-	printf("%d", total);
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", aft1 + (aft2 / l));
+		printf("%lu", aft2 % l);
+		aft1 = aft1 + bef1;
+		bef1 = aft1 - bef1;
+		aft2 = aft2 + bef2;
+		bef2 = aft2 - bef2;
+	}
 	printf("\n");
-
 	return (0);
 }
