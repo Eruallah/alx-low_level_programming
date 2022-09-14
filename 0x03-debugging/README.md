@@ -1,1 +1,1 @@
-Debugger
+Bug hunter
