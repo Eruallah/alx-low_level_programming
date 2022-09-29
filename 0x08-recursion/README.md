@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'My recursion' > README.md
+echo 'My initial' > README.md
