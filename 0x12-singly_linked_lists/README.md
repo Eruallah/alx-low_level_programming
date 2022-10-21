@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Mysingly link' > README.md
+echo 'mash' > README.md
