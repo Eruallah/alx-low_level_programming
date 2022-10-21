@@ -1,2 +1,1 @@
-#!/bin/bash
-echo 'Bug hunter' > README.md
+An introduction to singly list in c language
